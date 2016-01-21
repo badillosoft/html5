@@ -3,21 +3,51 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Login</title>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		
 		<script src="jquery.js"></script>
+		<script src="bootstrap.js"></script>
+		
 		<script src="mustache.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body>
-		<input id="txt_user" type="text" placeholder="Usuario">
-		<input id="txt_password" type="password" placeholder="Contraseña">
-		<button onclick="login(this)">ingresar</button>
+		<div class="panel">
+			<input class="form-control" id="txt_user"
+				type="text" placeholder="Usuario" autofocus><br>
+			<input class="form-control" id="txt_password"
+				type="password" placeholder="Contraseña"><br>
+			<button class="btn btn-success pull-right"
+				onclick="login(this)">ingresar</button>
+				
+			<br><br><br>
+			
+			<div id="target"></div>	
+		</div>
 		
-		<div id="target"></div>
+		<script id="tpl-msgbox-danger" type="x-tmpl-mustache">
+			<div class="alert alert-danger alert-dismissible">
+				<button type="button" class="close" 
+					data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{message}}
+			<div>
+		</script>
 		
-		<script id="template" type="x-tmpl-mustache">
+		<script id="tpl-msgbox-success" type="x-tmpl-mustache">
+			<div class="alert alert-success alert-dismissible">
+				<button type="button" class="close" 
+					data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{message}}
+			<div>
 			Bienvenido <strong>{{username}}</strong>
 			<br>
-			Tu nuevo token es: {{token}}
+			Tu nuevo token es: <strong>{{token}}</strong>
 		</script>
 	</body>
 </html>

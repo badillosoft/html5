@@ -17,29 +17,37 @@ function login(btn) {
 		}),
 		dataType: "json",
 		success: function (data) {
-			var target = document.getElementById('target');
+			var target = document.getElementById('target'),
+				template = null,
+				html = null;
 			
 			btn.disabled = false;
 			
 			if (data.code != 0) {
 				// TODO: Avisar que el acceso falló
-				target.innerHTML = data.message;
+				template = document.getElementById('tpl-msgbox-danger');
+			
+				html = Mustache.render(
+					template.innerHTML, 
+					{ message: data.message }
+				);
+				
+				target.innerHTML = html;
+			
 				sessionStorage.removeItem("token");
 				return;
 			}
 			
 			// TODO: Informar que el 
-			var template = document.getElementById('template');
+			template = document.getElementById('tpl-msgbox-success');
 			
-			var html = Mustache.render(
+			html = Mustache.render(
 				template.innerHTML, 
 				{ 
 					username: txt_user.value,
 					token: data.token 
 				}
 			);
-			
-			console.log(html);
 			
 			target.innerHTML = html;
 			
