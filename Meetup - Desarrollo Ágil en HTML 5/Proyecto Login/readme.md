@@ -443,7 +443,7 @@ Tipo de cuenta: __Transfer Banamex__
 
 Número de cuenta: __4766-8400-5755-0498__
 
-Si tienes cuenta _Transfer Banamx_ o _Tarjeta Saldazo_ asociada a tu número
+Si tienes cuenta _Transfer Banamex_ o _Tarjeta Saldazo_ asociada a tu número
 de teléfono también puedes enviar un mensaje de texto:
 
 SMS al 4040: __5513964635 *XX*__
