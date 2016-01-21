@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+// Alan Badillo Salas | badillo.soft@hotmail.com | @badillosoft
 
 var http = require('http');
 var express = require('express');
