@@ -1,11 +1,22 @@
 /* global Mustache */
 /* global $ */
 
+var txt_user = null;
+var txt_password = null;
+	
+window.onload = function () {
+	txt_user = document.getElementById('txt_user');
+	txt_password = document.getElementById('txt_password');
+	
+	txt_user.onkeydown = txt_password.onkeydown = function (e) {
+		if (e.keyCode == 13) {
+			login(document.getElementById('btn_login'));
+		}
+	};
+};
+
 function login(btn) {
 	btn.disabled = true;
-	
-	var txt_user = document.getElementById('txt_user');
-	var txt_password = document.getElementById('txt_password');
 	
 	$.ajax({
 		url: "http://localhost:8080/login",
@@ -21,7 +32,7 @@ function login(btn) {
 				template = null,
 				html = null;
 			
-			btn.disabled = false;
+				btn.disabled = false;
 			
 			if (data.code != 0) {
 				// TODO: Avisar que el acceso falló
