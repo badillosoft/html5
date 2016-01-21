@@ -4,11 +4,20 @@
 		<meta charset="utf-8">
 		<title>Login</title>
 		<script src="jquery.js"></script>
+		<script src="mustache.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body>
 		<input id="txt_user" type="text" placeholder="Usuario">
 		<input id="txt_password" type="password" placeholder="Contraseña">
 		<button onclick="login(this)">ingresar</button>
+		
+		<div id="target"></div>
+		
+		<script id="template" type="x-tmpl-mustache">
+			Bienvenido <strong>{{username}}</strong>
+			<br>
+			Tu nuevo token es: {{token}}
+		</script>
 	</body>
 </html>

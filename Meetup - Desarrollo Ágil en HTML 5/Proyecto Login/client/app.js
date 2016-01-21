@@ -1,3 +1,4 @@
+/* global Mustache */
 /* global $ */
 
 function login(btn) {
@@ -16,17 +17,32 @@ function login(btn) {
 		}),
 		dataType: "json",
 		success: function (data) {
+			var target = document.getElementById('target');
+			
 			btn.disabled = false;
 			
 			if (data.code != 0) {
 				// TODO: Avisar que el acceso falló
-				alert(data.message);
+				target.innerHTML = data.message;
 				sessionStorage.removeItem("token");
 				return;
 			}
 			
 			// TODO: Informar que el 
-			alert("Bienvenido");
+			var template = document.getElementById('template');
+			
+			var html = Mustache.render(
+				template.innerHTML, 
+				{ 
+					username: txt_user.value,
+					token: data.token 
+				}
+			);
+			
+			console.log(html);
+			
+			target.innerHTML = html;
+			
 			sessionStorage.setItem("token", data.token);
 		},
 		error: function (err) {
