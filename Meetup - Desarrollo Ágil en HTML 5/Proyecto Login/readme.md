@@ -430,3 +430,27 @@ se envía el código y mensaje correspondiente.
 mediante el paso 5. Recuerda inciar los servicios y apagarlos para ver
 las distintas respuestas del servidor.
 
+# Donaciones
+
+Si te sirvió este proyecto y deseas apoyarme para seguir creando más proyectos
+como este bien documentados y con tutorial paso a paso de como construirlo
+puedes depositar a la siguiente cuenta desde cualquier tienda __Oxxo__ o en
+cualquier banco __Banamex__. Por cada aportación recibida regalaré minutos de 
+consultoría vía __Skype__ (badillo.soft@hotmail.com) para resolver dudas
+sobre este u otros proyectos. 
+
+Tipo de cuenta: __Transfer Banamex__
+
+Número de cuenta: __4766-8400-5755-0498__
+
+Si tienes cuenta _Transfer Banamx_ o _Tarjeta Saldazo_ asociada a tu número
+de teléfono también puedes enviar un mensaje de texto:
+
+SMS al 4040: __5513964635 *XX*__
+
+Donde _XX_ es la cantidad que deseas donar.
+
+Parte de los fondos donados servirán para crear conferencias vía streaming
+cada primer sábado de cada mes donde mostraré cómo integrar nuevas tecnologías 
+a tu desarrollo web como Angular, Express, WebSockets, WebGL, SCSS y SASS, 
+MongoDB, entre otros.
